@@ -1,0 +1,98 @@
+:root {
+	--primary-color: #dc3545;
+	--dark-color: #333333;
+	--light-color: #f4f4f4;
+	--background-color: #ffffff;
+	--border-color: #cccccc;
+	--text-color: #333333;
+	--text-hover-color: #666666;
+	--text-selected-color: blue;
+	--btn-text-color: #ffffff;
+	--table-cell-border-color: #000000;
+	--table-cell-background-color:  #eeeeee;	
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	line-height: 1.6;
+	background: var(--background-color);
+	color: var(--text-color);
+}
+
+a {
+	color: var(--primary-color);
+	text-decoration: none;
+}
+
+a:hover {
+	color: var(--text-hover-color);
+}
+
+ul {
+	list-style: none;
+}
+
+input {
+	display: block;
+	width: 100%;
+	padding: 0.4rem;
+	font-size: 1.2rem;
+	border: 1px solid var(--border-color);
+	outline: none;
+	margin-bottom: 0.5rem;
+}
+
+.container {
+	max-width: 1100px;
+	margin: auto;
+	overflow: hidden;
+	padding: 0 2rem;
+}
+
+table th {
+	background: var(--light-color);
+}
+
+.btn {
+	display: inline-block;
+	background: var(--light-color);
+	color: var(--dark-color);
+	padding: 0.4rem 1.3rem;
+	font-size: 1rem;
+	border: none;
+	cursor: pointer;
+	margin-right: 0.5rem;
+	transition: opacity 0.2s;
+	outline: none;
+}
+
+.btn:disabled {
+	background: var(--dark-color);
+	color: var(--btn-text-color);
+	cursor: not-allowed;
+}
+
+.btn:hover:not(:disabled) {
+	opacity: 0.8;
+}
+
+.btn-block {
+	display: block;
+	width: 100%;
+}
+
+.btn-primary {
+	background: var(--primary-color);
+	color: var(--btn-text-color);
+}
+
+.text-center {
+	text-align: center;
+}

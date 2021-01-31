@@ -1,4 +1,5 @@
 <script lang="ts">
+import Calendar from "./Calendar.svelte";
 import Selector from "./Selector.svelte";
 </script>
 
@@ -13,7 +14,7 @@ header {
 		<Selector/>
 	</header>
 	<main>
-
+		<Calendar/>
 	</main>
 	<div>
 

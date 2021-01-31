@@ -1,15 +1,12 @@
 <script lang="ts">
-import { date } from './stores/date.store'
-
-const formatter = new Intl.DateTimeFormat('en', {
-  month: 'long',
-  year: 'numeric'
-});
+import { date, monthFormatter } from './stores/date.store';
 
 function goToMonth(dir: number) {
   date.update(current => {
-    current.setMonth(current.getMonth() + dir);
-    return current;
+    const newMonth = current.getMonth() + dir;    
+    const newDate = new Date(current.getFullYear(), newMonth, current.getDate());
+    const newEndDate = new Date(current.getFullYear(), newMonth + 1, 0);
+    return newDate < newEndDate ? newDate : newEndDate;
   });
 }
 
@@ -42,6 +39,6 @@ p i {
 
 <p>
   <i class="material-icons" on:click={prevMonth}>arrow_left</i>
-  <span>{formatter.format($date)}</span>
+  <span>{monthFormatter.format($date)}</span>
   <i class="material-icons" on:click={nextMonth}>arrow_right</i>
 </p>

@@ -1,5 +1,6 @@
 <script lang="ts">
 import Calendar from "./Calendar.svelte";
+import Organizer from "./Organizer.svelte";
 import Selector from "./Selector.svelte";
 </script>
 
@@ -17,6 +18,6 @@ header {
 		<Calendar/>
 	</main>
 	<div>
-
+		<Organizer/>
 	</div>
 </div>

@@ -57,7 +57,7 @@ const dateSubscription = date.subscribe(now => {
 onDestroy(dateSubscription);
 
 function select(selectDate: Date) {
-  date.update(_ => selectDate);
+  date.update(_ => new Date(selectDate));
 }
 </script>
 

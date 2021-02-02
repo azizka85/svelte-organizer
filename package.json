@@ -24,6 +24,7 @@
     "typescript": "^3.9.3"
   },
   "dependencies": {
+    "firebase": "^8.2.5",
     "sirv-cli": "^1.0.0"
   }
 }
